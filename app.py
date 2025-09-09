@@ -8,7 +8,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return '<h1>Hello world</h1>'
+    cislo_sveta = "007"
+    pole = ["Pondeli", "Utery", "Streda"]
+    return render_template("main.html", promenna = cislo_sveta, pole = pole)
 
 @app.route('/graph')
 def graph():
